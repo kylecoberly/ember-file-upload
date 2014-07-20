@@ -1,0 +1,39 @@
+<div class="image-upload">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6">
+				<label><strong>{{label}}</strong></label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 image-outline">
+				{{#if imageUrl}}
+					<span class="glyphicon glyphicon-remove" {{action "removeImage"}}></span>
+					<img class="thumb" {{bind-attr src="imageUrl"}} />
+				{{else}}
+					<p>Drag & Drop</p>
+				{{/if}}
+				{{#if progress}}
+					<progress min="0" max="100" value="0"></progress>
+				{{/if}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6 url-input">
+				{{input type="text" value=imageUrl}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<input type="file" class="file-input-field" />
+			</div>
+		</div>
+		{{#if errorMessage}}
+			<div class="row">
+				<div class="col-xs-6">
+					<p>{{errorMessage}}</p>
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</div>

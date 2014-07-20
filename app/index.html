@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ImageUploadComponent</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/image-upload-component.css">
+  </head>
+  <body>
+    <script>
+      window.ImageUploadComponentENV = {{ENV}};
+      window.EmberENV = window.ImageUploadComponentENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/image-upload-component.js"></script>
+    <script>
+      window.ImageUploadComponent = require('image-upload-component/app')['default'].create(ImageUploadComponentENV.APP);
+    </script>
+  </body>
+</html>

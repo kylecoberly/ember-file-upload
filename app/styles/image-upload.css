@@ -1,0 +1,33 @@
+div.image-upload {
+	width: 350px;
+}
+div.image-upload .url-input > input {
+	width: 350px;
+}
+div.image-upload .image-outline {
+	border: 2px #ccc dashed;
+	height: 175px;
+	width: 350px;
+	background-color: #fff;
+	margin-bottom: 15px;
+	padding: 0;
+	left: 17px;
+}
+div.image-upload .image-outline img {
+	width: 350px;
+	height: 175px;
+}
+div.image-upload .image-outline > p {
+	color: #ccc;
+	text-align: center;
+	font-weight: 900;
+	line-height: 175px;
+}
+div.image-upload .glyphicon-remove {
+	position: absolute;
+	font-size: 30px;
+	top: 5px;
+	right: 15px;
+	z-index: 10;
+	color: #f00;
+}
