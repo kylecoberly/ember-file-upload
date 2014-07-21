@@ -1,33 +1,48 @@
-div.image-upload {
-	width: 350px;
+div.image-upload .url-input {
+	margin-bottom: 10px;
+	width: 100%;
 }
-div.image-upload .url-input > input {
-	width: 350px;
+div.image-upload label {
+	width: 100%;
 }
+
 div.image-upload .image-outline {
 	border: 2px #ccc dashed;
 	height: 175px;
-	width: 350px;
 	background-color: #fff;
 	margin-bottom: 15px;
 	padding: 0;
 	left: 17px;
 }
-div.image-upload .image-outline img {
-	width: 350px;
-	height: 175px;
-}
 div.image-upload .image-outline > p {
 	color: #ccc;
 	text-align: center;
 	font-weight: 900;
+	font-size: 20px;
 	line-height: 175px;
 }
+
+div.image-upload .image-thumbnail {
+	position: relative;
+	background-color: #eee;
+	text-align: center;
+	height: 175px;
+}
+div.image-upload .image-thumbnail img {
+	height: 100%;
+}
+
 div.image-upload .glyphicon-remove {
 	position: absolute;
 	font-size: 30px;
-	top: 5px;
-	right: 15px;
+	top: 10px;
+	right: 25px;
 	z-index: 10;
 	color: #f00;
+}
+div.image-upload .error-message {
+	color: #f00;
+}
+div.image-upload progress {
+	width: 100%;
 }

@@ -1,39 +1,28 @@
 <div class="image-upload">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-6">
-				<label><strong>{{label}}</strong></label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-6 image-outline">
-				{{#if imageUrl}}
-					<span class="glyphicon glyphicon-remove" {{action "removeImage"}}></span>
-					<img class="thumb" {{bind-attr src="imageUrl"}} />
-				{{else}}
-					<p>Drag & Drop</p>
-				{{/if}}
-				{{#if progress}}
-					<progress min="0" max="100" value="0"></progress>
-				{{/if}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-6 url-input">
-				{{input type="text" value=imageUrl}}
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-6">
-				<input type="file" class="file-input-field" />
-			</div>
-		</div>
-		{{#if errorMessage}}
-			<div class="row">
-				<div class="col-xs-6">
-					<p>{{errorMessage}}</p>
-				</div>
+	<h3>{{label}}</h3>
+	{{#if file}}
+		{{#if imageThumbnail}}
+			<div class="image-thumbnail">
+				<span class="glyphicon glyphicon-remove" {{action "removeImage"}}></span>
+				<img {{bind-attr src="imageThumbnail"}} />
 			</div>
 		{{/if}}
+	{{else}}
+		<div class="image-outline">
+			<p>Drag / Touch / Click</p>
+		</div>
+	{{/if}}
+	{{#if progress}}
+		<progress min="0" max="100" {{bind-attr value="progress"}}></progress>
+	{{/if}}
+	<div>
+		<label>URL</label>
+		{{input type="text" value=fileUrl class="url-input"}}
 	</div>
+	<div>
+		<input type="file" class="file-input-field" />
+	</div>
+	{{#if errorMessage}}
+		<p class="error-message">{{errorMessage}}</p>
+	{{/if}}
 </div>
