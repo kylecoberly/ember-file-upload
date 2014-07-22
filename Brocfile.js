@@ -8,7 +8,7 @@ var app = new EmberApp();
 // output files.
 app.import('vendor/bootstrap/dist/css/bootstrap.css');
 app.import('vendor/bootstrap/dist/js/bootstrap.js');
-app.import('app/styles/image-upload.css');
+app.import('app/styles/file-upload.css');
 //
 // If you need to use different assets in different
 // environments, specify an object as the first parameter. That

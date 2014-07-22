@@ -1,0 +1,41 @@
+<div class="file-upload">
+	<h3>{{label}}</h3>
+	{{#if imageThumbnail}}
+		<div class="image-thumbnail">
+			<span class="glyphicon glyphicon-remove" {{action "removeFile"}}></span>
+			<img {{bind-attr src="imageThumbnail"}} />
+		</div>
+	{{else}}
+		{{#unless file}}
+			{{#view "drop-zone"}}
+				<p>Drag / Touch / Click</p>
+			{{/view}}
+		{{/unless}}
+	{{/if}}
+	{{#if urlVisible}}
+		<div>
+			<label>URL</label>
+			{{input type="text" value=fileUrl class="url-input"}}
+		</div>
+	{{else}}
+		{{#unless file}}
+			<div>
+				<button class="button" {{action "toggleUrlVisible"}}>Enter a URL</button>
+			</div>
+		{{/unless}}
+	{{/if}}
+
+	{{#if uploadPercentComplete}}
+		<progress max="1.0" {{bind-attr value="uploadPercentComplete"}}></progress>
+	{{/if}}
+	{{#if errorMessage}}
+		<p class="error-message">{{errorMessage}}</p>
+	{{/if}}
+	{{#if successMessage}}
+		<p class="success-message">{{successMessage}}</p>
+	{{/if}}
+
+	<div class="hidden">
+		<input type="file" class="file-input-field" {{action "updateFile" on="change"}} />
+	</div>
+</div>

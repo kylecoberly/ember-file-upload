@@ -1,12 +1,15 @@
-div.image-upload .url-input {
+div.file-upload .url-input {
 	margin-bottom: 10px;
 	width: 100%;
 }
-div.image-upload label {
+div.file-upload button {
+	width: 100%;
+}
+div.file-upload label {
 	width: 100%;
 }
 
-div.image-upload .image-outline {
+div.file-upload .drop-zone {
 	border: 2px #ccc dashed;
 	height: 175px;
 	background-color: #fff;
@@ -14,7 +17,7 @@ div.image-upload .image-outline {
 	padding: 0;
 	left: 17px;
 }
-div.image-upload .image-outline > p {
+div.file-upload .drop-zone > p {
 	color: #ccc;
 	text-align: center;
 	font-weight: 900;
@@ -22,17 +25,17 @@ div.image-upload .image-outline > p {
 	line-height: 175px;
 }
 
-div.image-upload .image-thumbnail {
+div.file-upload .image-thumbnail {
 	position: relative;
 	background-color: #eee;
 	text-align: center;
 	height: 175px;
+	margin-bottom: 15px;
 }
-div.image-upload .image-thumbnail img {
+div.file-upload .image-thumbnail img {
 	height: 100%;
 }
-
-div.image-upload .glyphicon-remove {
+div.file-upload .glyphicon-remove {
 	position: absolute;
 	font-size: 30px;
 	top: 10px;
@@ -40,9 +43,17 @@ div.image-upload .glyphicon-remove {
 	z-index: 10;
 	color: #f00;
 }
-div.image-upload .error-message {
+
+div.file-upload progress {
+	width: 100%;
+}
+div.file-upload .error-message {
 	color: #f00;
 }
-div.image-upload progress {
-	width: 100%;
+div.file-upload .success-message {
+	color: #00cd00;
+}
+
+div.file-upload .hidden {
+	display: none;
 }
