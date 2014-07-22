@@ -10,18 +10,22 @@ In the absence of a good way to package components, these are the files that mak
 * app/views/drop-zone.js
 
 Put those wherever it makes sense to for your application. Use it like this:
-	{{file-upload
-		label="This will display at the top of the component"
-		uploadEndpoint="http://www.where-are-files/going/to/be/sent"
-		allowedMimeTypes=variableThatHoldsAnArrayOfMIMETypes
-		fileUrlBinding="variableYouWantTheFileLocationToBindTo"
-	}}
+```handlebars
+{{file-upload
+	label="This will display at the top of the component"
+	uploadEndpoint="http://www.where-are-files/going/to/be/sent"
+	allowedMimeTypes=variableThatHoldsAnArrayOfMIMETypes
+	fileUrlBinding="variableYouWantTheFileLocationToBindTo"
+}}
+```
 
 * MIME-types are in this format: "images.*", "application.pdf", etc.
 * The component expects that your upload endpoint will return something like this:
-	{
-		"file_url" : "heres/my/file.jpg"
-	}
+```json
+{
+	"file_url" : "heres/my/file.jpg"
+}
+```
 
 ## Demo Installation
 
