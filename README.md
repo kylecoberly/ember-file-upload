@@ -1,7 +1,5 @@
 # Image-upload-component
 
-This README outlines the details of collaborating on this Ember application.
-
 ## Component "Installation"
 In the absence of a good way to package components, these are the files that make up the component:
 * app/components/file-upload.js
