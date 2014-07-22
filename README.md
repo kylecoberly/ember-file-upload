@@ -25,6 +25,10 @@ Put those wherever it makes sense to for your application. Use it like this:
 }
 ```
 
+## Notes
+* Currently requires Bootstrap for the X glyph.
+* Only large uploads, nothing displays until the FileReader API is finishing processing the file
+
 ## Demo Installation
 
 * `git clone` this repository

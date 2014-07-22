@@ -31,6 +31,12 @@ export default Ember.Component.extend({
 		}
 	}.observes("file", "fileUrl").on("change", "init"),
 
+	watchFileUrl: function(){
+		if (this.get("fileUrl")){
+			this.send("clearMessages");
+		}
+	}.observes("fileUrl").on("change"),
+
 	isValidFileType: function(){
 		var self = this;
 		var isFileTypeMatch = false;
@@ -96,6 +102,10 @@ export default Ember.Component.extend({
 			this.set("errorMessage", null);
 			this.set("successMessage", null);
 			this.set("urlVisible", false);
+		},
+		clearMessages: function(){
+			this.set("errorMessage", null);
+			this.set("successMessage", null);
 		},
 		openFileDialog: function(){
 			this.$(".file-input-field").click();
